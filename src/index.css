@@ -1,0 +1,735 @@
+/* ============================================================================ 
+
+_______    _     _         ____   __    _____            _             _       
+|__   __|  | |   | |       / __ \ / _|  / ____|          | |           | |      
+   | | __ _| |__ | | ___  | |  | | |_  | |     ___  _ __ | |_ ___ _ __ | |_ ___ 
+   | |/ _` | '_ \| |/ _ \ | |  | |  _| | |    / _ \| '_ \| __/ _ \ '_ \| __/ __|
+   | | (_| | |_) | |  __/ | |__| | |   | |___| (_) | | | | ||  __/ | | | |_\__ \
+   |_|\__,_|_.__/|_|\___|  \____/|_|    \_____\___/|_| |_|\__\___|_| |_|\__|___/
+                                                                                
+=============================================================================== */
+
+/* -----------------------------------
+    SECTION ONE: UNIVERSAL CSS
+-------------------------------------*/
+/* 
+1.0 Body & Margin Overrides
+-------------------------
+
+1.1 Flexbox CSS
+----------------------------------
+
+1.2 Flexgrid CSS
+----------------------------------
+*/
+
+/* -----------------------------------
+    SECTION TWO: SEARCH PAGE 
+-------------------------------------*/
+/* 
+1.0 Filter Component CSS
+--------------------------------------
+
+1.1 IP Gallery Component CSS
+--------------------------------------
+*/
+
+/* -----------------------------------
+    SECTION THREE: IP PAGE 
+-------------------------------------*/
+
+/* -----------------------------------
+    SECTION FOUR: PROJECTS PAGE 
+-------------------------------------*/
+
+/* -----------------------------------
+    SECTION FIVE: DEAL FLOW PAGE 
+-------------------------------------*/
+
+/* -----------------------------------
+    SECTION SIX: EMAIL PAGE 
+-------------------------------------*/
+
+/* -----------------------------------
+    SECTION SEVEN: COMMON ELEMENTS
+-------------------------------------*/
+
+/* ==========================================================
+
+                  END OF TABLE OF CONTENTS
+
+=============================================================*/
+
+/* -----------------------------------
+    SECTION ONE: UNIVERSAL CSS
+-------------------------------------*/
+
+/* 
+1.0 Font Declarations & Overrides
+------------------------------------
+*/
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  font-size: smaller;
+  list-style-position: inside;
+}
+
+/* 
+1.1 Color Declarations
+----------------------------------
+*/
+
+:root {
+  --main-purple: #651504;
+  --main-dark: #000000;
+
+  --main-purple-hover: hsl(256, 71%, 36%);
+
+  --secondary-light-grey: hsl(252, 15%, 97%);
+  --secondary-dark-grey: hsl(251, 5%, 66%);
+
+  --filter-blue: #651504;
+  /*F--filter-dark-blue: #b4adea;*/
+  --filter-dark-blue: #cd8b76;
+
+  --background-light-blue: #f2f5f9;
+  --background-light-grey: #e8eaed;
+
+  --project-card-background: #e5e8ee;
+}
+
+.navbar {
+  background-color: var(--main-purple);
+}
+
+.bg-primary {
+  background-color: var(--main-purple) !important;
+}
+
+/* 
+1.2 helpers
+-----------------------------------
+*/
+/* Opacity helpers */
+.o-0 {
+  opacity: 0;
+}
+
+.o-10 {
+  opacity: 10%;
+}
+
+.o-20 {
+  opacity: 20%;
+}
+
+.o-30 {
+  opacity: 30%;
+}
+
+.o-40 {
+  opacity: 40%;
+}
+
+.o-50 {
+  opacity: 50%;
+}
+
+.o-60 {
+  opacity: 60%;
+}
+
+.o-70 {
+  opacity: 70%;
+}
+
+.o-80 {
+  opacity: 80%;
+}
+
+.o-90 {
+  opacity: 90%;
+}
+
+.o-1 {
+  opacity: 100%;
+}
+
+/* flexbox helpers */
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex: 1;
+}
+
+.flex-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-sa {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-alic {
+  align-items: center;
+}
+
+/* text size helpers */
+
+.txt-xs {
+  font-size: smaller;
+}
+
+.txt-sm {
+  font-size: small;
+}
+
+.txt-md {
+  font-size: medium;
+}
+
+.txt-lg {
+  font-size: large;
+}
+
+.txt-xl {
+  font-size: larger;
+}
+
+.txt-xxl {
+  font-size: x-large;
+}
+
+/* 
+1.4 Navbar
+---------------------------------------
+*/
+
+.nav-link {
+  font-size: large;
+  font-weight: 600;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+/* 
+1.5 Universal Bootstrap Overrides 
+--------------------------------------
+*/
+
+.btn-primary {
+  background-color: var(--main-purple);
+  border-color: var(--main-purple);
+}
+
+.card {
+  border: none;
+}
+
+.shadow-sm {
+  box-shadow: 0 0.075rem 0.25rem rgba(39, 48, 62, 0.1) !important;
+}
+
+/* 
+1.6 Universal ant Design Overrides 
+-------------------------------------
+*/
+
+.editable-cell {
+  position: relative;
+}
+
+.editable-cell-value-wrap {
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.editable-row:hover .editable-cell-value-wrap {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 4px 11px;
+}
+
+.ant-select-selection--multiple {
+  max-height: 36px;
+}
+
+.ant-form-item {
+  margin-bottom: 12px;
+}
+
+.ant-btn {
+  padding: 0 10px;
+}
+
+.ant-btn:hover,
+.ant-btn:focus {
+  color: black;
+  border-color: black;
+}
+
+.ant-btn-primary {
+  background-color: var(--main-purple);
+  border-color: var(--main-purple);
+  color: white;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:active,
+.ant-btn-primary:focus {
+  background-color: var(--main-purple-hover);
+  border-color: var(--main-purple);
+  color: white;
+}
+
+.ant-progress-bg {
+  background-color: var(--main-purple);
+}
+
+/* THIS NEXT LINE IS SO DIRTY GOOD LORD */
+/* I SHOULD PROBABLY FIND A WAY TO FIX THIS */
+.ant-affix>div>button:disabled {
+  transition: all 0s;
+  opacity: 1 !important;
+  background-color: #f5f5f5;
+  border-color: #d9d9d9;
+}
+
+.ant-popover-inner-content {
+  max-height: 225px;
+  overflow-y: scroll;
+}
+
+/* -----------------------------------
+    SECTION TWO: SEARCH PAGE CSS
+-------------------------------------*/
+
+/* 
+1.0 Filter Component CSS
+--------------------------------------
+*/
+
+/* 1.0.1 modal component css overrides */
+
+.modal-header {
+  color: white;
+  background-color: var(--main-dark);
+  -webkit-border-top-left-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+  -moz-border-radius-topleft: 2px;
+  -moz-border-radius-topright: 2px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom: none;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.modal-header>button>span {
+  color: white;
+  opacity: 1;
+}
+
+.close {
+  opacity: 1;
+  text-shadow: none;
+}
+
+.filterDelete {
+  transition: all 0.15s;
+}
+
+/* 1.0.2 Filter Search Gallery */
+
+.filterRowContainer {
+  align-content: center;
+  align-items: center;
+}
+
+.filterRowRelativePositioner {
+  position: relative;
+}
+
+.addFilterButton {
+  background-color: white;
+  border-color: rgb(236, 236, 236);
+  width: 10rem;
+  text-align: left;
+  font-size: 15px;
+}
+
+.filterCategory,
+.filterType,
+.filterCondition,
+.addFilterButton {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 0.5rem;
+}
+
+.filterCategory,
+.filterType,
+.addFilterButton {
+  text-transform: capitalize;
+}
+
+.filterCategory,
+.filterType {
+  background-color: var(--filter-blue);
+  border-color: var(--filter-blue);
+  border-width: 1px;
+  border-style: solid;
+  color: white;
+  padding: 6px 10px;
+  text-align: left;
+  display: flex;
+  min-width: 10rem;
+  font-size: 15px;
+}
+
+.filterCondition {
+  background-color: var(--filter-dark-blue);
+  border-color: var(--filter-dark-blue);
+  border-width: 1px;
+  border-style: solid;
+  color: white;
+  padding: 6px 10px;
+  text-align: left;
+  display: flex;
+  min-width: 10rem;
+  font-size: 15px;
+}
+
+.filterCategory>h5,
+.filterCondition>h5,
+.filterType>h5 {
+  padding: 0;
+  margin: 0;
+}
+
+.filterConditions {
+  background-color: var(--filter-dark-blue);
+  border-color: var(--filter-dark-blue);
+  font-size: 15px;
+}
+
+.filterValue {
+  background-color: white;
+  border-color: rgb(236, 236, 236);
+  color: black;
+  font-size: 15px;
+}
+
+/* 1.0.4 filter nav */
+
+.filterNav {
+  justify-content: space-between;
+  border-color: rgb(235, 235, 235) !important;
+  width: 100%;
+}
+
+.filterNavButtonNoBackground {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.filterNavButtonNoBackground:hover>* {
+  color: white;
+}
+
+.filterNavButtonNoBackground.disabled {
+  background-color: transparent;
+  border-color: transparent;
+  opacity: 1 !important;
+}
+
+/* 1.0.4 filter connection divs */
+
+.addFilterButtonConnection {
+  height: 4px;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  width: calc(70px);
+  background-color: var(--secondary-dark-grey);
+}
+
+.filterConnection {
+  height: 4px;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  width: calc(100% - 60px);
+  background-color: var(--secondary-dark-grey);
+}
+
+.filterConnectionVert {
+  height: 57px;
+  width: 4px;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  background-color: var(--secondary-dark-grey);
+}
+
+/* 
+1.1 IP Gallery Component CSS
+--------------------------------------
+*/
+
+/*1.1.1 IP gallery nav */
+
+.IPNavSection {
+  align-items: center;
+}
+
+.IPNavSectionTwo {
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.IPNavSectionThree {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.IPGalleryNavP {
+  margin: 0;
+  display: inline;
+}
+
+.IPGallerySearch {
+  width: 100%;
+}
+
+.projectGallerySearch {
+  max-width: calc(100% - 230px);
+}
+
+.IPNavBtn {
+  background-color: var(--main-purple);
+  border-color: var(--main-purple);
+  color: white;
+}
+
+.IPNavBtn:active {
+  background-color: var(--filter-blue);
+  border-color: var(--filter-blue);
+}
+
+.GalleryAffixButton {
+  background-color: var(--background-light-blue);
+  padding: 10px;
+}
+
+#countPerPage {
+  width: auto;
+  max-width: 45px;
+  text-align: center;
+}
+
+.archiveView {
+  background-color: var(--secondary-dark-grey);
+}
+
+/* 1.1.2 IP gallery cards */
+
+.IPCard {
+  border-color: rgb(235, 235, 235) !important;
+}
+
+.IPCardLink:hover {
+  text-decoration: none;
+}
+
+a>.card {
+  color: initial;
+  text-decoration: none !important;
+}
+
+.actor-card-photo {
+  padding-left: 20px !important;
+}
+
+/* a:hover {
+  color: initial;
+  text-decoration: none;
+} */
+
+.tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: smaller;
+  color: grey;
+}
+
+.tags>li>* {
+  text-decoration: underline;
+  text-transform: capitalize;
+  color: grey;
+}
+
+.IPCardGallery {
+  background: var(--background-light-blue);
+}
+
+/* -----------------------------------
+    SECTION THREE: IP PAGE CSS
+-------------------------------------*/
+
+/* 
+1.0 IP Nav 
+--------------------------------------
+*/
+
+.IPNav {
+  background: var(--background-light-grey);
+}
+
+.IPDetailsBackLink {
+  color: initial;
+}
+
+.IPDetailsBackLink:hover {
+  color: initial;
+  text-decoration: none;
+}
+
+.IPNavButtonBorder {
+  display: inline-block;
+  border-left: solid;
+  border-width: 1px;
+  padding: 0 5px;
+  border-color: var(--secondary-dark-grey);
+}
+
+.IPNavButtonBorder:last-of-type {
+  display: inline-block;
+  border-left: solid;
+  border-right: solid;
+  border-width: 1px;
+  padding: 0 5px;
+  border-color: var(--secondary-dark-grey);
+}
+
+/* .IPNavButton {
+  background: transparent;
+  border-color: transparent;
+  color: white;
+}
+
+.IPNavButton:hover {
+  background: transparent;
+  border-color: transparent;
+  opacity: 0.5;
+  color: black;
+} */
+
+/* 
+1.1 IP Status
+-------------------------------------
+*/
+
+.IPstatus {
+  background: var(--main-dark);
+  color: white;
+}
+
+/* -----------------------------------
+    SECTION FOUR: PROJECTS PAGE CSS
+-------------------------------------*/
+
+/* 
+1.0 Project Gallery
+--------------------------------------
+*/
+
+.ProjectCardGalley {
+  background-color: white;
+}
+
+.archiveProjectCardGallery {
+  background-color: var(--background-light-blue);
+}
+
+.projectCard {
+  /* background-color: var(--secondary-light-grey); */
+  background-color: var(--project-card-background);
+  /* background-color: var(--background-light-grey); */
+}
+
+.project-info {
+  /* background-color: var(--secondary-light-grey);*/
+  background-color: var(--project-card-background);
+}
+
+/* -----------------------------------
+    SECTION FIVE: DEAL FLOW PAGE CSS
+-------------------------------------*/
+
+/* -----------------------------------
+    SECTION SIX: EMAIL PAGE CSS
+-------------------------------------*/
+
+/* -----------------------------------
+    SECTION SEVEN: COMMON ELEMENTS
+-------------------------------------*/
+
+/* 
+1.0 Button Table 
+-------------------------------------
+*/
+.buttonTableContainer.active {
+  background-color: var(--background-light-grey);
+  border-color: var(--background-light-grey);
+}
+
+.buttonTableElement {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+
+.buttonTableElement:focus {
+  outline: 0;
+}
+
+/* 
+1.1 Similar Technology
+-------------------------------------
+*/
+
+.similarTechnology {
+  background-color: var(--background-light-blue);
+}
