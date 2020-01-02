@@ -16,7 +16,9 @@ const IPDetail = ({ name, photos, state, skills, rating }) => {
         />
       ))}
 
-      <p style={{ "padding-top": "100px" }}>Skills: {skills}</p>
+      <p style={{ "padding-top": "100px" }}>
+        Skills: {skills === "" ? "No skills added" : skills}
+      </p>
     </Col>
   );
 };

@@ -31,9 +31,12 @@ class ProjectPage extends Component {
 
     this.setState({ workflow: project.workflow });
 
-    const response = await axios.post("http://127.0.0.1:4433/api/actors", {
-      query: project.ip
-    });
+    const response = await axios.post(
+      "https://desicaster.herokuapp.com/api/actors",
+      {
+        query: project.ip
+      }
+    );
     console.log(project.ip);
     const actors = response.data;
     console.log(actors);

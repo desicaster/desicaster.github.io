@@ -35,7 +35,7 @@ class IPCardContent extends Component {
           Height: {height_feet}'{height_inches}"
         </CardText>
         <CardText className="m-0 txt-sm">
-          Reel: {reel ? reel : "None added"}
+          Reel: {reel ? "Available" : "None added"}
         </CardText>
         <hr className="my-2" />
       </React.Fragment>

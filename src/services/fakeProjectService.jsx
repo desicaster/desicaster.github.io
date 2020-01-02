@@ -3,26 +3,26 @@ export const projects = [
     id: "0",
     projectTitle: "Favorites",
     projectDescription:
-      "This is where the audition description will go. Things like the date, the required actors, the producer, and any other information that you have on the type of actor you are looking for will go here.",
+      "This is where actors you've favorited will end up. We're still building out this feature, so you might see bugs here and there!",
     scouts: [
       { name: "John Doe", id: "0", joinDate: "11/2/2019" },
       { name: "Jamie Smith", id: "1", joinDate: "11/2/2019" },
       { name: "Eddy Johnson", id: "2", joinDate: "11/2/2019" }
     ],
     workflow: [
-      { id: "0", label: "Send Initial Contact Email" },
-      { id: "1", label: "Review Non Confidential Information" },
-      { id: "2", label: "Internal Review & Validation" },
-      { id: "3", label: "Send NDA" },
-      { id: "4", label: "Review Confidential Information" },
-      { id: "5", label: "Enter Intro Contract Negotiation" }
+      { id: "0", label: "Send initial contact email" },
+      { id: "1", label: "Review prior projects and reel" },
+      { id: "2", label: "Send request for virtual audition" },
+      { id: "3", label: "Review audition tapes with producers" },
+      { id: "4", label: "Call them in for an in-person audition" },
+      { id: "5", label: "Enter intro contract negotiation" }
     ],
     tags: ["tag one", "tag two", "tag three", "tag four"],
     count: "12",
-    publishDate: "November 2nd, 2019",
-    lastUpdate: "12 hours ago",
+    publishDate: "January 2nd, 2020",
+    lastUpdate: "2 hours ago",
     archived: false,
-    ip: [0, 5, 6],
+    ip: [1, 2, 9],
     similar: ["0", "1", "2", "3", "4"],
     collections: [
       { heading: "Sample section", body: "this is the sample text" }
@@ -56,28 +56,28 @@ export const projects = [
   },
   {
     id: "1",
-    projectTitle: "Audition Two",
+    projectTitle: "New Years Eve",
     projectDescription:
-      "This is where the audition description will go. Things like the date, the required actors, the producer, and any other information that you have on the type of actor you are looking for will go here.",
+      "This is an example of a sample project you might create to hold actors and manage casting for a project.",
     scouts: [
       { name: "John Doe", id: "0", joinDate: "11/2/2019" },
       { name: "Jamie Smith", id: "1", joinDate: "11/2/2019" },
       { name: "Eddy Johnson", id: "2", joinDate: "11/2/2019" }
     ],
     workflow: [
-      { id: "0", label: "Send Initial Contact Email" },
-      { id: "1", label: "Review Non Confidential Information" },
-      { id: "2", label: "Internal Review & Validation" },
-      { id: "3", label: "Send NDA" },
-      { id: "4", label: "Review Confidential Information" },
-      { id: "5", label: "Enter Intro Contract Negotiation" }
+      { id: "0", label: "Send initial contact email" },
+      { id: "1", label: "Review prior projects and reel" },
+      { id: "2", label: "Send request for virtual audition" },
+      { id: "3", label: "Review audition tapes with producers" },
+      { id: "4", label: "Call them in for an in-person audition" },
+      { id: "5", label: "Enter intro contract negotiation" }
     ],
     tags: ["tag one", "tag two", "tag three", "tag four"],
     count: "12",
-    publishDate: "November 2nd, 2019",
-    lastUpdate: "12 hours ago",
+    publishDate: "January 2nd, 2020",
+    lastUpdate: "2 hours ago",
     archived: false,
-    ip: [0, 5, 6],
+    actors: [0, 5, 6],
     similar: ["0", "1", "2", "3", "4"],
     collections: [
       { heading: "Sample section", body: "this is the sample text" }
@@ -108,453 +108,14 @@ export const projects = [
         ]
       }
     ]
-  },
-  {
-    id: "2",
-    projectTitle: "Audition Three",
-    projectDescription:
-      "This is where the audition description will go. Things like the date, the required actors, the producer, and any other information that you have on the type of actor you are looking for will go here.",
-    scouts: [
-      { name: "John Doe", id: "0", joinDate: "11/2/2019" },
-      { name: "Jamie Smith", id: "1", joinDate: "11/2/2019" },
-      { name: "Eddy Johnson", id: "2", joinDate: "11/2/2019" }
-    ],
-    workflow: [
-      { id: "0", label: "Send Initial Contact Email" },
-      { id: "1", label: "Review Non Confidential Information" },
-      { id: "2", label: "Internal Review & Validation" },
-      { id: "3", label: "Send NDA" },
-      { id: "4", label: "Review Confidential Information" },
-      { id: "5", label: "Enter Intro Contract Negotiation" }
-    ],
-    tags: ["tag one", "tag two", "tag three", "tag four"],
-    count: "12",
-    publishDate: "November 2nd, 2019",
-    lastUpdate: "12 hours ago",
-    archived: false,
-    ip: [0, 5, 6],
-    similar: ["0", "1", "2", "3", "4"],
-    collections: [
-      { heading: "Sample section", body: "this is the sample text" }
-    ],
-    searches: [
-      {
-        name: "Filter A",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      },
-      {
-        name: "Filter B",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      },
-      {
-        name: "Filter C",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      }
-    ]
-  },
-  {
-    id: "3",
-    projectTitle: "Audition Four",
-    projectDescription:
-      "This is where the audition description will go. Things like the date, the required actors, the producer, and any other information that you have on the type of actor you are looking for will go here.",
-    scouts: [
-      { name: "John Doe", id: "0", joinDate: "11/2/2019" },
-      { name: "Jamie Smith", id: "1", joinDate: "11/2/2019" },
-      { name: "Eddy Johnson", id: "2", joinDate: "11/2/2019" }
-    ],
-    workflow: [
-      { id: "0", label: "Send Initial Contact Email" },
-      { id: "1", label: "Review Non Confidential Information" },
-      { id: "2", label: "Internal Review & Validation" },
-      { id: "3", label: "Send NDA" },
-      { id: "4", label: "Review Confidential Information" },
-      { id: "5", label: "Enter Intro Contract Negotiation" }
-    ],
-    tags: ["tag one", "tag 2", "tag three", "tag four"],
-    count: "12",
-    publishDate: "November 2nd, 2019",
-    ip: [0, 5, 6],
-    similar: ["0", "1", "2", "3", "4"],
-    collections: [
-      { heading: "Sample section", body: "this is the sample text" }
-    ],
-    lastUpdate: "12 hours ago",
-    archived: false,
-    searches: [
-      {
-        name: "Filter A",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      },
-      {
-        name: "Filter B",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      },
-      {
-        name: "Filter C",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      }
-    ]
-  },
-  {
-    id: "4",
-    projectTitle: "Audition Five",
-    projectDescription:
-      "This is where the audition description will go. Things like the date, the required actors, the producer, and any other information that you have on the type of actor you are looking for will go here.",
-    scouts: [
-      { name: "John Doe", id: "0", joinDate: "11/2/2019" },
-      { name: "Jamie Smith", id: "1", joinDate: "11/2/2019" },
-      { name: "Eddy Johnson", id: "2", joinDate: "11/2/2019" }
-    ],
-    workflow: [
-      { id: "0", label: "Send Initial Contact Email" },
-      { id: "1", label: "Review Non Confidential Information" },
-      { id: "2", label: "Internal Review & Validation" },
-      { id: "3", label: "Send NDA" },
-      { id: "4", label: "Review Confidential Information" },
-      { id: "5", label: "Enter Intro Contract Negotiation" }
-    ],
-    tags: ["tag one", "tag 2", "tag three", "tag four"],
-    count: "12",
-    publishDate: "November 2nd, 2019",
-    ip: [0, 5, 6],
-    similar: ["0", "1", "2", "3", "4"],
-    collections: [
-      { heading: "Sample section", body: "this is the sample text" }
-    ],
-    lastUpdate: "12 hours ago",
-    archived: false,
-    searches: [
-      {
-        name: "Filter A",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      },
-      {
-        name: "Filter B",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      },
-      {
-        name: "Filter C",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      }
-    ]
-  },
-  {
-    id: "5",
-    projectTitle: "Audition Six",
-    projectDescription:
-      "This is where the audition description will go. Things like the date, the required actors, the producer, and any other information that you have on the type of actor you are looking for will go here.",
-    scouts: [
-      { name: "John Doe", id: "0", joinDate: "11/2/2019" },
-      { name: "Jamie Smith", id: "1", joinDate: "11/2/2019" },
-      { name: "Eddy Johnson", id: "2", joinDate: "11/2/2019" }
-    ],
-    workflow: [
-      { id: "0", label: "Send Initial Contact Email" },
-      { id: "1", label: "Review Non Confidential Information" },
-      { id: "2", label: "Internal Review & Validation" },
-      { id: "3", label: "Send NDA" },
-      { id: "4", label: "Review Confidential Information" },
-      { id: "5", label: "Enter Intro Contract Negotiation" }
-    ],
-    tags: ["tag one", "tag 2", "tag three", "tag four"],
-    count: "12",
-    publishDate: "November 2nd, 2019",
-    ip: [0, 5, 6],
-    similar: ["0", "1", "2", "3", "4"],
-    collections: [
-      { heading: "Sample section", body: "this is the sample text" }
-    ],
-    lastUpdate: "12 hours ago",
-    archived: false,
-    searches: [
-      {
-        name: "Filter A",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      },
-      {
-        name: "Filter B",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      },
-      {
-        name: "Filter C",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      }
-    ]
-  },
-  {
-    id: "6",
-    projectTitle: "Audition Seven",
-    projectDescription:
-      "This is where the audition description will go. Things like the date, the required actors, the producer, and any other information that you have on the type of actor you are looking for will go here.",
-    scouts: [
-      { name: "John Doe", id: "0", joinDate: "11/2/2019" },
-      { name: "Jamie Smith", id: "1", joinDate: "11/2/2019" },
-      { name: "Eddy Johnson", id: "2", joinDate: "11/2/2019" }
-    ],
-    workflow: [
-      { id: "0", label: "Send Initial Contact Email" },
-      { id: "1", label: "Review Non Confidential Information" },
-      { id: "2", label: "Internal Review & Validation" },
-      { id: "3", label: "Send NDA" },
-      { id: "4", label: "Review Confidential Information" },
-      { id: "5", label: "Enter Intro Contract Negotiation" }
-    ],
-    tags: ["tag one", "tag 2", "tag three", "tag four"],
-    count: "12",
-    publishDate: "November 2nd, 2019",
-    ip: [0, 5, 6],
-    similar: ["0", "1", "2", "3", "4"],
-    collections: [
-      { heading: "Sample section", body: "this is the sample text" }
-    ],
-    lastUpdate: "12 hours ago",
-    archived: false,
-    searches: [
-      {
-        name: "Filter A",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      },
-      {
-        name: "Filter B",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      },
-      {
-        name: "Filter C",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      }
-    ]
-  },
-  {
-    id: "7",
-    projectTitle: "Audition Eight",
-    projectDescription:
-      "This is where the audition description will go. Things like the date, the required actors, the producer, and any other information that you have on the type of actor you are looking for will go here.",
-    scouts: [
-      { name: "John Doe", id: "0", joinDate: "11/2/2019" },
-      { name: "Jamie Smith", id: "1", joinDate: "11/2/2019" },
-      { name: "Eddy Johnson", id: "2", joinDate: "11/2/2019" }
-    ],
-    workflow: [
-      { id: "0", label: "Send Initial Contact Email" },
-      { id: "1", label: "Review Non Confidential Information" },
-      { id: "2", label: "Internal Review & Validation" },
-      { id: "3", label: "Send NDA" },
-      { id: "4", label: "Review Confidential Information" },
-      { id: "5", label: "Enter Intro Contract Negotiation" }
-    ],
-    tags: ["tag one", "tag 2", "tag three", "tag four"],
-    count: "12",
-    publishDate: "November 2nd, 2019",
-    ip: [0, 5, 6],
-    similar: ["0", "1", "2", "3", "4"],
-    collections: [
-      { heading: "Sample section", body: "this is the sample text" }
-    ],
-    lastUpdate: "12 hours ago",
-    archived: false,
-    searches: [
-      {
-        name: "Filter A",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      },
-      {
-        name: "Filter B",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      },
-      {
-        name: "Filter C",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      }
-    ]
-  },
-  {
-    id: "8",
-    projectTitle: "Audition One",
-    projectDescription:
-      "This is where the audition description will go. Things like the date, the required actors, the producer, and any other information that you have on the type of actor you are looking for will go here.",
-    scouts: [
-      { name: "John Doe", id: "0", joinDate: "11/2/2019" },
-      { name: "Jamie Smith", id: "1", joinDate: "11/2/2019" },
-      { name: "Eddy Johnson", id: "2", joinDate: "11/2/2019" }
-    ],
-    workflow: [
-      { id: "0", label: "Send Initial Contact Email" },
-      { id: "1", label: "Review Non Confidential Information" },
-      { id: "2", label: "Internal Review & Validation" },
-      { id: "3", label: "Send NDA" },
-      { id: "4", label: "Review Confidential Information" },
-      { id: "5", label: "Enter Intro Contract Negotiation" }
-    ],
-    tags: ["tag one", "tag 2", "tag three", "tag four"],
-    count: "12",
-    publishDate: "November 2nd, 2019",
-    ip: [0, 5, 6],
-    similar: ["0", "1", "2", "3", "4"],
-    collections: [
-      { heading: "Sample section", body: "this is the sample text" }
-    ],
-    lastUpdate: "12 hours ago",
-    archived: false,
-    searches: [
-      {
-        name: "Filter A",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      },
-      {
-        name: "Filter B",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      },
-      {
-        name: "Filter C",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      }
-    ]
-  },
-  {
-    projectTitle: "Audition One",
-    projectDescription:
-      "This is where the audition description will go. Things like the date, the required actors, the producer, and any other information that you have on the type of actor you are looking for will go here.",
-    scouts: [
-      { name: "John Doe", id: "0", joinDate: "11/2/2019" },
-      { name: "Jamie Smith", id: "1", joinDate: "11/2/2019" },
-      { name: "Eddy Johnson", id: "2", joinDate: "11/2/2019" }
-    ],
-    workflow: [
-      { id: "0", label: "Send Initial Contact Email" },
-      { id: "1", label: "Review Non Confidential Information" },
-      { id: "2", label: "Internal Review & Validation" },
-      { id: "3", label: "Send NDA" },
-      { id: "4", label: "Review Confidential Information" },
-      { id: "5", label: "Enter Intro Contract Negotiation" }
-    ],
-    tags: ["tag one", "tag 2", "tag three", "tag four"],
-    count: 12,
-    publishDate: "November 2nd, 2019",
-    ip: [0, 5, 6],
-    similar: ["0", "1", "2", "3", "4"],
-    collections: [
-      { heading: "Sample section", body: "this is the sample text" }
-    ],
-    lastUpdate: "12 hours ago",
-    archived: false,
-    searches: [
-      {
-        name: "Filter A",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      },
-      {
-        name: "Filter B",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      },
-      {
-        name: "Filter C",
-        results: "607",
-        filters: [
-          ["Actor", "age", "is not above", ["24"]],
-          ["Abilities", "languages include", "", ["Urdu", "Arabic"]]
-        ]
-      }
-    ]
   }
 ];
 
 export const archived_projects = [
   {
     id: "42",
-    projectTitle: "Archived Project Forty-two",
-    projectDescription: "This is where the projects go to die",
+    projectTitle: "Archived Audition",
+    projectDescription: "This is where auditions go when archived.",
     scouts: [
       { name: "John Doe", id: "0", joinDate: "11/2/2019" },
       { name: "Jamie Smith", id: "1", joinDate: "11/2/2019" },

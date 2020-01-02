@@ -9,9 +9,12 @@ export default class IPSimilar extends Component {
 
   async componentDidMount() {
     console.log(this.props.similarIDs);
-    const response = await axios.post("http://127.0.0.1:4433/api/actors", {
-      query: this.props.similarIDs
-    });
+    const response = await axios.post(
+      "https://desicaster.herokuapp.com/api/actors",
+      {
+        query: this.props.similarIDs
+      }
+    );
 
     const actors = response.data;
     console.log(actors);
