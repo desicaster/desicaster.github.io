@@ -7,7 +7,8 @@ const TableSection = ({ title, content }) => {
       {content.map(function(c, index) {
         return (
           <p className="mb-0" key={index} style={{ fontSize: "12px" }}>
-            {c.constructor === Object && c.title}
+            {c.constructor === Object && "title" in c && c.title}
+            {c.constructor === Object && !("title" in c) && c}
             {c.constructor !== Object && c}
           </p>
         );

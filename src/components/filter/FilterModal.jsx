@@ -8,12 +8,14 @@ class FilterModal extends Component {
   state = { categories: [], currentCategory: "", currentTypes: [] };
 
   async componentDidMount() {
-    const response = await axios.get("http://127.0.0.1:4433/api/categories");
+    const response = await axios.get(
+      "https://desicaster.herokuapp.com/api/categories"
+    );
     const categories = response.data;
     const currentCategory = categories[0];
 
     const type_response = await axios.get(
-      "http://127.0.0.1:4433/api/types/" + currentCategory
+      "https://desicaster.herokuapp.com/api/types/" + currentCategory
     );
     const currentTypes = type_response.data;
     this.setState({ categories, currentCategory, currentTypes });
@@ -21,7 +23,7 @@ class FilterModal extends Component {
 
   handleCategoryTap = async currentCategory => {
     const type_response = await axios.get(
-      "http://127.0.0.1:4433/api/types/" + currentCategory
+      "https://desicaster.herokuapp.com/api/types/" + currentCategory
     );
     const currentTypes = type_response.data;
     this.setState({ currentCategory, currentTypes });

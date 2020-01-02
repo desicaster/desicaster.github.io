@@ -7,15 +7,18 @@ class Search extends Component {
   state = { actors: [], filters: [], go_back: undefined };
 
   async populateActors(filters, actor_start, actor_end) {
-    const response = await axios.post("http://127.0.0.1:4433/api/search", {
-      filters: filters.map(f => ({
-        type: f.type,
-        condition: f.condition,
-        values: f.activeValues
-      })),
-      actor_start: actor_start,
-      actor_end: actor_end
-    });
+    const response = await axios.post(
+      "https://desicaster.herokuapp.com/api/search",
+      {
+        filters: filters.map(f => ({
+          type: f.type,
+          condition: f.condition,
+          values: f.activeValues
+        })),
+        actor_start: actor_start,
+        actor_end: actor_end
+      }
+    );
     const actors = response.data;
     if (typeof actors === undefined) {
       return;
@@ -37,7 +40,7 @@ class Search extends Component {
         let allFilters = [...this.state.filters];
         for (const appliedFilter of this.props.location.state.filters) {
           const response = await axios.get(
-            "http://127.0.0.1:4433/api/filter/" + appliedFilter[1]
+            "https://desicaster.herokuapp.com/api/filter/" + appliedFilter[1]
           );
           let filter = response.data;
 

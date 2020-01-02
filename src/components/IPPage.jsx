@@ -18,7 +18,7 @@ class IPPage extends Component {
   async componentDidMount() {
     this.parseLocationParams();
     const response = await axios.get(
-      "http://127.0.0.1:4433/api/actor/" + this.props.match.params.id
+      "https://desicaster.herokuapp.com/api/actor/" + this.props.match.params.id
     );
     console.log(this.props.match.params.id);
     const actor = response.data;
@@ -59,17 +59,56 @@ class IPPage extends Component {
           <Row>
             <IPDetail
               name={actor.first_name + " " + actor.last_name}
+              state={actor.state}
               photos={actor.photos}
               rating={actor.rating}
+              skills={actor.skills}
             />
 
             <IPHighlights
-              contact={actor.email}
+              email={"Email: " + actor.email}
+              phone={"Phone: " + actor.phone}
+              height={
+                "Height: " + actor.height_feet + "'" + actor.height_inches + '"'
+              }
+              gender={"Gender: " + actor.gender}
+              hair={"Hair: " + actor.hair_length + ", " + actor.hair_color}
+              eyes={"Eyes: " + actor.eye_color}
               languages={actor.languages}
-              ethnicity={"Ethnicity: " + actor.ethnicity}
-              build={"Build: " + actor.build}
               age={"Age: " + actor.birthday}
-              projects={actor.projects}
+              instagram={
+                actor.instagram === "" ? (
+                  ""
+                ) : (
+                  <a href={actor.instagram}>Instagram</a>
+                )
+              }
+              facebook={
+                actor.facebook === "" ? (
+                  ""
+                ) : (
+                  <a href={actor.facebook}>Facebook</a>
+                )
+              }
+              imdb={actor.imdb === "" ? "" : <a href={actor.imdb}>IMDB</a>}
+              reel={actor.reel === "" ? "" : <a href={actor.reel}>Reel</a>}
+              website={
+                actor.website === "" ? (
+                  ""
+                ) : (
+                  <a href={actor.website}>Personal Website</a>
+                )
+              }
+              agency={
+                actor.agent_email === ""
+                  ? ["No agent found"]
+                  : [
+                      actor.agent_name,
+                      actor.agency_name,
+                      actor.agent_email,
+                      actor.agent_phone
+                    ]
+              }
             />
           </Row>
         </Container>

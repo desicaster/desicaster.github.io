@@ -8,19 +8,35 @@ import { Link } from "react-router-dom";
 const IPCard = ({
   id,
   favorited,
+  projects,
+  workflow,
   first_name,
   last_name,
-  email,
-  ethnicity,
-  build,
-  languages,
   birthday,
-  minimum_age,
-  maximum_age,
+  email,
+  phone,
   photos,
+  state,
+  gender,
+  hair_color,
+  eye_color,
+  hair_length,
+  height_feet,
+  height_inches,
+  instagram,
+  facebook,
+  imdb,
+  reel,
+  website,
+  agency_name,
+  agent_name,
+  agent_email,
+  agent_phone,
+  languages,
+  skills,
+  age_range,
   rating,
-  projects,
-  workflow
+  similar
 }) => {
   return (
     <Col xl="4" lg="6" md="6">
@@ -38,6 +54,7 @@ const IPCard = ({
             name={first_name + " " + last_name}
             birthday={birthday}
             email={email}
+            state={state}
             id={id}
             rating={rating}
             favorited={favorited}
@@ -45,10 +62,11 @@ const IPCard = ({
           <CardBody>
             <IPCardContent
               photos={photos}
-              projects={projects}
-              age_range={minimum_age + " - " + maximum_age}
-              ethnicity={ethnicity}
-              build={build}
+              age_range={age_range}
+              reel={reel}
+              height_feet={height_feet}
+              height_inches={height_inches}
+              skills={skills}
             />
 
             <CardFoot languages={languages} />

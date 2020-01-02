@@ -1,18 +1,25 @@
 import React, { Component } from "react";
-import { CardText, CardTitle } from "reactstrap";
+import { CardText } from "reactstrap";
 
 class IPCardContent extends Component {
+  pretty_age_range(age_range) {
+    const first = age_range[0].split("-")[0];
+    const last = age_range[age_range.length - 1];
+
+    if (last.includes("+")) {
+      return first + "+";
+    }
+    return first + " to " + last.split("-")[1];
+  }
+
   render() {
-    const { name, photos, projects, age_range, ethnicity, build } = this.props;
+    const { photos, age_range, height_feet, height_inches, reel } = this.props;
     return (
       <React.Fragment>
-        <CardTitle>
-          <h4>{name}</h4>
-        </CardTitle>
-
         <div className="pb-3">
-          {photos.map((p, idx) => (
+          {photos.slice(0, 3).map((p, idx) => (
             <img
+              height="175"
               key={idx}
               className="actor-card-photo"
               src={p}
@@ -22,11 +29,14 @@ class IPCardContent extends Component {
         </div>
 
         <CardText className="m-0 txt-sm">
-          Uploaded projects: {projects.length}
+          Age range: {this.pretty_age_range(age_range)}
         </CardText>
-        <CardText className="m-0 txt-sm">Age range: {age_range}</CardText>
-        <CardText className="m-0 txt-sm">Ethnicity: {ethnicity}</CardText>
-        <CardText className="m-0 txt-sm">Build: {build}</CardText>
+        <CardText className="m-0 txt-sm">
+          Height: {height_feet}'{height_inches}"
+        </CardText>
+        <CardText className="m-0 txt-sm">
+          Reel: {reel ? reel : "None added"}
+        </CardText>
         <hr className="my-2" />
       </React.Fragment>
     );

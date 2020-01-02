@@ -3,8 +3,8 @@ import { Container, Row, Col, CardText } from "reactstrap";
 
 class CardFoot extends Component {
   shortenTags = tags => {
-    if (tags.length > 3) {
-      const shortTags = tags.slice(0, 3);
+    if (tags.length > 4) {
+      const shortTags = tags.slice(0, 4);
       const returnedTags = [...shortTags, "..."];
       return returnedTags;
     } else {

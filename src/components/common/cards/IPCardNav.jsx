@@ -48,7 +48,7 @@ class IPCardNav extends Component {
   }
 
   render() {
-    const { name, birthday, rating, contact_email } = this.props;
+    const { name, birthday, rating, state, contact_email } = this.props;
 
     return (
       <React.Fragment>
@@ -59,7 +59,7 @@ class IPCardNav extends Component {
                 className="mb-0 mt-1 font-weight-normal"
                 style={{ fontSize: "smaller" }}
               >
-                {name} <br /> Age {this.age(birthday)}
+                {name} <br /> ({state}) - Age {this.age(birthday)}
               </p>
             </div>
 
